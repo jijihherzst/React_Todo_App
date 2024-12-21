@@ -1,0 +1,86 @@
+:root {
+  --background: #44174e;
+  --foreground: #662249;
+  --input-color-light: #ffffff;
+  --input-color-dark: #ffaef8;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'DynaPuff', serif;
+}
+body {
+  display: flex;
+  width: 100%;
+}
+.todo-list {
+  margin: auto;
+  text-align: center;
+  min-width: 300px;
+}
+.head {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+input,
+button {
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 15px;
+  background: linear-gradient(to left, #ffaef8, #ffffff);
+}
+input[type='checkbox'] {
+  accent-color: var(--background);
+}
+ul {
+  padding: 20px;
+  div.item-wrapper {
+    border: 1px solid rgb(255, 255, 255);
+    background: linear-gradient(
+      to left,
+      var(--input-color-light),
+      var(--input-color-dark)
+    );
+
+    border-radius: 20px;
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px;
+    input {
+      margin-right: 20px;
+    }
+    li {
+      font-size: 15px;
+      text-align: center;
+      list-style-type: none;
+    }
+    span {
+      font-size: 20px;
+      color: var(--background);
+    }
+  }
+}
+h4 {
+  font-size: 18px;
+  color: white;
+  float: left;
+  margin-left: 10px;
+}
+ul.list {
+  margin-bottom: 10px;
+  border-bottom: 3px solid var(--input-color-dark);
+  border-radius: 10px 10px 0px 30px;
+}
+.completed {
+  text-decoration: line-through;
+}
+.add {
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, rgb(255, 174, 248), rgb(255, 255, 255));
+}
